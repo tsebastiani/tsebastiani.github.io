@@ -3,31 +3,31 @@
 	<Element>
 		<ID>1</ID>
 		<Description>Macbook</Description>
-		<price>1500</price>
+		<Price>1500</Price>
 		<Location>London</Location>
 	</Element>
 	<Element>
 		<ID>2</ID>
 		<Description>Macbook Air</Description>
-		<price>1300</price>
+		<Price>1300</Price>
 		<Location>London</Location>
 	</Element>
 	<Element>
 		<ID>3</ID>
 		<Description>iPhone 6s</Description>
-		<price>800</price>
+		<Price>800</Price>
 		<Location>New York</Location>
 	</Element>
 	<Element>
 		<ID>4</ID>
 		<Description>iPad Pro</Description>
-		<price>900</price>
+		<Price>900</Price>
 		<Location>Rome</Location>
 	</Element>
 	<Element>
 		<ID>5</ID>
 		<Description>iWatch</Description>
-		<price>400</price>
+		<Price>400</Price>
 		<Location>Berlin</Location>
 	</Element>
 </root>
