@@ -31,7 +31,7 @@
 				<key>bundle-identifier</key>
 				<string>it.x3solutions.ContaFatti.watchkitapp</string>
 				<key>bundle-version</key>
-				<string>2.0Beta</string>
+				<string>2.1Beta</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
