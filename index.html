@@ -21,6 +21,7 @@
             padding: 40px;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Questo centra tutto il contenuto all'interno del container */
         }
         img {
             width: 150px;
@@ -28,6 +29,7 @@
             border-radius: 50%;
             border: 3px solid #A9B7C6;
             margin-bottom: 20px;
+            display: inline-block; /* Per assicurarsi che l'immagine sia centrata correttamente */
         }
         h1 {
             color: #FFFFFF;
@@ -41,6 +43,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            align-items: center; /* Centra i link orizzontalmente */
         }
         a {
             color: #6897BB;
@@ -49,6 +52,8 @@
             border-radius: 5px;
             background: #3C3F41;
             transition: background-color 0.3s ease;
+            width: 100%; /* Aumenta la larghezza per un look più ordinato */
+            text-align: center; /* Centra il testo dei link */
         }
         a:hover {
             background: #4E5154;
