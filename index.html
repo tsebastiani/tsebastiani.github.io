@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Senior Software Engineer at Red Hat</title>
+    <title>Tullio Sebastiani - Senior Software Engineer at Red Hat</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap');
+
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Helvetica Neue', sans-serif;
-            background: #121212;
-            color: #f1f1f1;
+            font-family: 'Roboto Mono', monospace;
+            background: #1a1a1a;
+            color: #e0e0e0;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -29,39 +31,45 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 5px solid #ff4500;
-            transition: transform 0.3s ease;
+            border: 3px solid #00bcd4;
+            transition: box-shadow 0.3s ease;
         }
         img:hover {
-            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
         }
         h1 {
-            font-size: 2.5em;
-            margin: 20px 0 10px;
-            color: #ff4500;
+            font-size: 2em;
+            margin: 10px 0 5px;
+            color: #00bcd4;
+        }
+        h2 {
+            font-size: 1.2em;
+            color: #e0e0e0;
+            margin: 0;
         }
         .links a {
             display: inline-block;
             margin: 10px 15px;
             padding: 10px 20px;
             text-decoration: none;
-            color: #f1f1f1;
-            border: 2px solid #ff4500;
+            color: #e0e0e0;
+            border: 2px solid #00bcd4;
             background: transparent;
             transition: all 0.3s ease;
             font-weight: bold;
         }
         .links a:hover {
-            background: #ff4500;
-            color: #121212;
-            box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
+            background: #00bcd4;
+            color: #1a1a1a;
+            box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="profile.jpg" alt="Profile Picture">
-        <h1>Senior Software Engineer at Red Hat</h1>
+        <img src="profile.jpg" alt="Tullio Sebastiani">
+        <h1>Tullio Sebastiani</h1>
+        <h2>Senior Software Engineer at Red Hat</h2>
         <div class="links">
             <a href="https://github.com/tsebastiani">GitHub</a>
             <a href="https://www.linkedin.com/in/tulliosebastiani/">LinkedIn</a>
@@ -78,18 +86,19 @@
                     link.style.color = '#' + randomColor;
                 });
                 link.addEventListener('mouseout', () => {
-                    link.style.borderColor = '#ff4500';
-                    link.style.color = '#f1f1f1';
+                    link.style.borderColor = '#00bcd4';
+                    link.style.color = '#e0e0e0';
                 });
             });
 
-            // Effetto di rotazione leggera dell'immagine
+            // Effetto di illuminazione sull'immagine al passaggio del mouse
             let img = document.querySelector('img');
-            let angle = 0;
-            setInterval(() => {
-                angle += 1;
-                img.style.transform = `rotate(${angle}deg)`;
-            }, 100);
+            img.addEventListener('mouseover', () => {
+                img.style.boxShadow = '0 0 30px rgba(0, 188, 212, 0.8)';
+            });
+            img.addEventListener('mouseout', () => {
+                img.style.boxShadow = 'none';
+            });
         });
     </script>
 </body>
