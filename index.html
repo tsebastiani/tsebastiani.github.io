@@ -1,75 +1,96 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tullio Sebastiani - Senior Software Engineer</title>
+    <title>Senior Software Engineer at Red Hat</title>
     <style>
         body {
-            background-color: #2B2B2B;
-            color: #A9B7C6;
-            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', sans-serif;
+            background: #121212;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
-            padding: 0;
+            overflow: hidden;
         }
         .container {
-            background: #3C3F41;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center; /* Questo centra tutto il contenuto all'interno del container */
+            text-align: center;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 3px solid #A9B7C6;
-            margin-bottom: 20px;
-            display: inline-block; /* Per assicurarsi che l'immagine sia centrata correttamente */
+            border: 5px solid #ff4500;
+            transition: transform 0.3s ease;
+        }
+        img:hover {
+            transform: scale(1.1);
         }
         h1 {
-            color: #FFFFFF;
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 2.5em;
+            margin: 20px 0 10px;
+            color: #ff4500;
         }
-        p {
-            margin-bottom: 20px;
-        }
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            align-items: center; /* Centra i link orizzontalmente */
-        }
-        a {
-            color: #6897BB;
+        .links a {
+            display: inline-block;
+            margin: 10px 15px;
+            padding: 10px 20px;
             text-decoration: none;
-            padding: 10px;
-            border-radius: 5px;
-            background: #3C3F41;
-            transition: background-color 0.3s ease;
-            width: 100%; /* Aumenta la larghezza per un look più ordinato */
-            text-align: center; /* Centra il testo dei link */
+            color: #f1f1f1;
+            border: 2px solid #ff4500;
+            background: transparent;
+            transition: all 0.3s ease;
+            font-weight: bold;
         }
-        a:hover {
-            background: #4E5154;
+        .links a:hover {
+            background: #ff4500;
+            color: #121212;
+            box-shadow: 0 0 20px rgba(255, 69, 0, 0.5);
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="profile.jpg" alt="Tullio Sebastiani">
-        <h1>Tullio Sebastiani</h1>
-        <p>Senior Software Engineer at RedHat</p>
+        <img src="profile.jpeg" alt="Profile Picture">
+        <h1>Senior Software Engineer at Red Hat</h1>
         <div class="links">
-            <a href="https://github.com/tsebastiani" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/tulliosebastiani/" target="_blank">LinkedIn</a>
-            <a href="mailto:github.sensitize723@passinbox.com">Email Me</a>
+            <a href="https://github.com/tsebastiani">GitHub</a>
+            <a href="https://www.linkedin.com/in/tulliosebastiani/">LinkedIn</a>
+            <a href="mailto:github.sensitize723@passinbox.com">Email</a>
         </div>
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            const links = document.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('mouseover', () => {
+                    let randomColor = Math.floor(Math.random()*16777215).toString(16);
+                    link.style.borderColor = '#' + randomColor;
+                    link.style.color = '#' + randomColor;
+                });
+                link.addEventListener('mouseout', () => {
+                    link.style.borderColor = '#ff4500';
+                    link.style.color = '#f1f1f1';
+                });
+            });
+
+            // Effetto di rotazione leggera dell'immagine
+            let img = document.querySelector('img');
+            let angle = 0;
+            setInterval(() => {
+                angle += 1;
+                img.style.transform = `rotate(${angle}deg)`;
+            }, 100);
+        });
+    </script>
 </body>
 </html>
